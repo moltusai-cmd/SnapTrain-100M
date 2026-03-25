@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"C:/Users/ncouf/bitnet/test_npu/TrainerApp/build/cmake_install.cmake",
-		"C:/Users/ncouf/bitnet/test_npu/TrainerApp/build/src/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

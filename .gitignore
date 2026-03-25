@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.npy
+
+# Binaries & Libraries
+*.exe
+*.dll
+*.lib
+*.pdb
+*.obj
+*.exp
+*.so
+*.a
+*.dylib
+
+# Weights & Models
+*.onnx
+*.onnx.data
+*.bin
+*.raw
+
+# Build artifacts
+build/
+test_npu/TrainerApp/build/
+.ninja_deps
+.ninja_log
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Transient test results
+test_npu/loop_test_choc/Result_*/
+test_npu/out_diag/Result_*/
+test_npu/output_results/Result_*/
+test_npu/output_results_npu/Result_*/
+test_npu/output_transformer_npu/Result_*/
+test_npu/speed_100m_*/Result_*/
+test_npu/tiny_worker/out/Result_*/
+test_npu/profile_test_2/*.log

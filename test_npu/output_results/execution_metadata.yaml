@@ -1,0 +1,29 @@
+---
+timestamp: 148942383657
+command: C:\Users\ncouf\bitnet\test_npu\qnn-net-run.exe --model qnn_training_model.dll --backend QnnCpu.dll --input_list input_list.txt --output_dir output_results
+execution_mode: synchronous
+inferences_completed: 1
+graphs:
+  - graph_name: qnn_training_model
+    input_tensors:
+    - tensor_name: input_x
+      id: 1
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1,16]
+    - tensor_name: target_y
+      id: 2
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1,8]
+    - tensor_name: weights_latent_in
+      id: 3
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [8,16]
+    output_tensors:
+    - tensor_name: prediction
+      id: 25
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1,8]
+    - tensor_name: weights_latent_out
+      id: 41
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [8,16]

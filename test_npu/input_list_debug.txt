@@ -1,0 +1,1 @@
+src:=src_id.raw tgt:=tgt_id.raw w_qkv:=w_qkv_id.raw w_ffn1:=w_ffn1_id.raw w_ffn2:=w_ffn2_id.raw

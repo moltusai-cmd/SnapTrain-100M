@@ -1,0 +1,49 @@
+---
+timestamp: 784200213355
+command: C:\Users\ncouf\bitnet\reproduction_package\test_npu\qnn-net-run.exe --retrieve_context output/bitnet_choc_htp.bin.bin --backend QnnHtp.dll --input_list input_list_choc_100.txt --output_dir loop_test_choc
+execution_mode: synchronous
+inferences_completed: 100
+graphs:
+  - graph_name: qnn_bitnet_choc
+    input_tensors:
+    - tensor_name: src
+      id: 1
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [12,128]
+    - tensor_name: tgt
+      id: 2
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [12,128]
+    - tensor_name: w_qkv
+      id: 3
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [128,128]
+    - tensor_name: w_ffn1
+      id: 4
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [512,128]
+    - tensor_name: w_ffn2
+      id: 5
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [128,512]
+    - tensor_name: lr
+      id: 6
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1]
+    output_tensors:
+    - tensor_name: prediction
+      id: 26
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [12,128]
+    - tensor_name: new_w_qkv
+      id: 40
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [128,128]
+    - tensor_name: new_w_ffn1
+      id: 42
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [512,128]
+    - tensor_name: new_w_ffn2
+      id: 44
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [128,512]

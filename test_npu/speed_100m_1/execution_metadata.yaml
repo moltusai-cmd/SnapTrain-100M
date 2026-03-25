@@ -1,0 +1,217 @@
+---
+timestamp: 784301342551
+command: C:\Users\ncouf\bitnet\reproduction_package\test_npu\qnn-net-run.exe --retrieve_context output/q4_100m_htp.bin.bin --backend QnnHtp.dll --input_list input_list_100m_1.txt --output_dir speed_100m_1
+execution_mode: synchronous
+inferences_completed: 1
+graphs:
+  - graph_name: qnn_q4_100m
+    input_tensors:
+    - tensor_name: src
+      id: 1
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [64,1024]
+    - tensor_name: tgt
+      id: 2
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [64,1024]
+    - tensor_name: lr
+      id: 3
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1]
+    - tensor_name: w_qkv_0
+      id: 4
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: w_ffn1_0
+      id: 5
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: w_ffn2_0
+      id: 6
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: w_qkv_1
+      id: 7
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: w_ffn1_1
+      id: 8
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: w_ffn2_1
+      id: 9
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: w_qkv_2
+      id: 10
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: w_ffn1_2
+      id: 11
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: w_ffn2_2
+      id: 12
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: w_qkv_3
+      id: 13
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: w_ffn1_3
+      id: 14
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: w_ffn2_3
+      id: 15
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: w_qkv_4
+      id: 16
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: w_ffn1_4
+      id: 17
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: w_ffn2_4
+      id: 18
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: w_qkv_5
+      id: 19
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: w_ffn1_5
+      id: 20
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: w_ffn2_5
+      id: 21
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: w_qkv_6
+      id: 22
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: w_ffn1_6
+      id: 23
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: w_ffn2_6
+      id: 24
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: w_qkv_7
+      id: 25
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: w_ffn1_7
+      id: 26
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: w_ffn2_7
+      id: 27
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    output_tensors:
+    - tensor_name: prediction
+      id: 373
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [64,1024]
+    - tensor_name: new_w_ffn2_7
+      id: 391
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: new_w_ffn1_7
+      id: 393
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: new_w_qkv_7
+      id: 395
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: new_w_ffn2_6
+      id: 411
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: new_w_ffn1_6
+      id: 413
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: new_w_qkv_6
+      id: 415
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: new_w_ffn2_5
+      id: 431
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: new_w_ffn1_5
+      id: 433
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: new_w_qkv_5
+      id: 435
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: new_w_ffn2_4
+      id: 451
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: new_w_ffn1_4
+      id: 453
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: new_w_qkv_4
+      id: 455
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: new_w_ffn2_3
+      id: 471
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: new_w_ffn1_3
+      id: 473
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: new_w_qkv_3
+      id: 475
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: new_w_ffn2_2
+      id: 491
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: new_w_ffn1_2
+      id: 493
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: new_w_qkv_2
+      id: 495
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: new_w_ffn2_1
+      id: 511
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: new_w_ffn1_1
+      id: 513
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: new_w_qkv_1
+      id: 515
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]
+    - tensor_name: new_w_ffn2_0
+      id: 530
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,4096]
+    - tensor_name: new_w_ffn1_0
+      id: 532
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4096,1024]
+    - tensor_name: new_w_qkv_0
+      id: 534
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1024,1024]

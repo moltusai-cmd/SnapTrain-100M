@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.20)
+project(qnn_training_model)
+
+# Chemins vers le SDK QNN
+set(QNN_SDK_ROOT "C:/Users/ncouf/bitnet/qairt_sdk/qairt/2.26.2.240911")
+include_directories("${QNN_SDK_ROOT}/include/QNN")
+include_directories(".")
+
+# On définit la bibliothèque avec TOUS les fichiers nécessaires
+add_library(qnn_training_model SHARED 
+    qnn_training_model.cpp 
+    QnnModel.cpp
+    QnnModelPal.cpp
+    QnnWrapperUtils.cpp
+)
+
+# On force l'utilisation de la bibliothèque standard C++ (pour std::string etc)
+set_target_properties(qnn_training_model PROPERTIES 
+    LINKER_LANGUAGE CXX
+    PREFIX ""
+)

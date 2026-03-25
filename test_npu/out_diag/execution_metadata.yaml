@@ -1,0 +1,37 @@
+---
+timestamp: 161363377127
+command: C:\Users\ncouf\bitnet\test_npu\qnn-net-run.exe --retrieve_context output/qnn_nano_htp.bin.bin --backend QnnHtp.dll --input_list input_list.txt --output_dir out_diag
+execution_mode: synchronous
+inferences_completed: 1
+graphs:
+  - graph_name: qnn_transformer_model
+    input_tensors:
+    - tensor_name: src
+      id: 1
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4,16]
+    - tensor_name: tgt
+      id: 2
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4,16]
+    - tensor_name: w_enc
+      id: 3
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [16,16]
+    - tensor_name: w_dec
+      id: 4
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [16,16]
+    output_tensors:
+    - tensor_name: prediction
+      id: 17
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [4,16]
+    - tensor_name: grad_w_dec
+      id: 23
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [16,16]
+    - tensor_name: grad_w_enc
+      id: 24
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [16,16]

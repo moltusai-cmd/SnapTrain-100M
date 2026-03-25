@@ -1,0 +1,45 @@
+---
+timestamp: 160876521495
+command: ..\qnn-net-run.exe --retrieve_context ../output_tiny/qnn_tiny_htp.bin.bin --backend ../QnnHtp.dll --input_list input_list.txt --output_dir out
+execution_mode: synchronous
+inferences_completed: 1
+graphs:
+  - graph_name: qnn_tiny_npu
+    input_tensors:
+    - tensor_name: src
+      id: 1
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [16,32]
+    - tensor_name: tgt
+      id: 2
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [16,32]
+    - tensor_name: w_qkv
+      id: 3
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [32,32]
+    - tensor_name: w_ffn1
+      id: 4
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [128,32]
+    - tensor_name: w_ffn2
+      id: 5
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [32,128]
+    output_tensors:
+    - tensor_name: pred
+      id: 22
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [16,32]
+    - tensor_name: w_qkv_new
+      id: 37
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [32,32]
+    - tensor_name: w_ffn1_new
+      id: 39
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [128,32]
+    - tensor_name: w_ffn2_new
+      id: 41
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [32,128]

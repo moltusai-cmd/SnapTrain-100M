@@ -1,0 +1,1 @@
+input_data:=src.raw target_data:=tgt.raw weight_1:=w1.raw weight_2:=w2.raw

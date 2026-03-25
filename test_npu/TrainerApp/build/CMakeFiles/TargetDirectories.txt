@@ -1,0 +1,5 @@
+C:/Users/ncouf/bitnet/test_npu/TrainerApp/build/CMakeFiles/edit_cache.dir
+C:/Users/ncouf/bitnet/test_npu/TrainerApp/build/CMakeFiles/rebuild_cache.dir
+C:/Users/ncouf/bitnet/test_npu/TrainerApp/build/src/CMakeFiles/npu-trainer.dir
+C:/Users/ncouf/bitnet/test_npu/TrainerApp/build/src/CMakeFiles/edit_cache.dir
+C:/Users/ncouf/bitnet/test_npu/TrainerApp/build/src/CMakeFiles/rebuild_cache.dir

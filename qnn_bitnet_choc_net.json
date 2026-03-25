@@ -1,0 +1,2094 @@
+{
+	"model.cpp": "C:\\Users\\ncouf\\bitnet\\reproduction_package\\qnn_bitnet_choc.cpp",
+	"model.bin": "C:\\Users\\ncouf\\bitnet\\reproduction_package\\qnn_bitnet_choc.bin",
+	"converter_command": "qnn-onnx-converter; act_bitwidth=8; act_quantizer=tf; act_quantizer_calibration=min-max; act_quantizer_schema=asymmetric; adjust_nms_features_dims=True; algorithms=[]; align_matmul_ranks=True; apply_masked_softmax=uncompressed; arch_checker=False; batch=None; bias_bitwidth=8; converter_op_package_lib=; copyright_file=None; custom_io=; custom_op_config_paths=None; debug=-1; define_symbol=None; disable_batchnorm_folding=False; disable_node_validation=False; disable_qnn_op_config_validation=False; disable_relu_squashing=False; dry_run=None; dumpIR=False; dump_custom_io_config_template=; dump_encoding_json=False; dump_inferred_model=False; dump_qairt_io_config_yaml=; dump_qairt_quantizer_command=None; dump_value_info=False; enable_framework_trace=False; enable_match_gathernd=False; exclude_named_tensors=False; expand_gru_op_structure=True; expand_lstm_op_structure=False; expand_sparse_op_structure=False; export_format=cpp; extract_color_transform=True; float_bias_bitwidth=0; float_bias_bw=0; float_bitwidth=32; float_bw=32; float_fallback=False; force_prune_cast_ops=False; handle_gather_negative_indices=True; ignore_encodings=False; include_data_invariant_ops=False; inject_cast_for_gather=True; input_dim=None; input_dtype=[]; input_encoding=[]; input_layout=[]; input_list=None; input_type=[]; keep_disconnected_nodes=False; keep_int64_inputs=False; keep_quant_nodes=False; keep_weights_quantized=False; match_caffe_ssd_to_tf=True; model_version=None; multi_time_steps_gru=False; multi_time_steps_lstm=False; no_simplification=False; op_package_lib=; out_names=['new_w_qkv', 'new_w_ffn1', 'new_w_ffn2', 'prediction']; overwrite_model_prefix=False; pack_4_bit_weights=False; package_name=None; packed_masked_softmax_inputs=[]; packed_max_seq=1; param_quantizer=None; param_quantizer_calibration=min-max; param_quantizer_schema=asymmetric; percentile_calibration_value=99.99; perform_axes_to_spatial_first_order=True; perform_layout_transformation=False; prepare_inputs_as_params=False; preprocess_roi_pool_inputs=True; preserve_io=[]; quantization_overrides=; restrict_quantization_steps=[]; squash_box_decoder=True; unroll_gru_time_steps=True; unroll_lstm_time_steps=True; use_aimet_quantizer=False; use_convert_quantization_nodes=False; use_dynamic_16_bit_weights=False; use_native_dtype=False; use_native_input_files=False; use_native_output_files=False; use_per_channel_quantization=False; use_per_row_quantization=False; validate_models=False; weights_bitwidth=8",
+	"copyright_str": "",
+	"op_types": [
+		"ElementWiseNeuron",
+		"Eltwise_Binary",
+		"Eltwise_Ternary",
+		"Eltwise_Unary",
+		"MatMul",
+		"Softmax",
+		"Transpose"
+	],
+	"graph": {
+		"tensors": {
+			"div": {
+				"id": 17,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					12
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"index_put": {
+				"id": 34,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					512
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"le": {
+				"id": 33,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 1288,
+				"unquantized_data_type": 1288,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					512
+				],
+				"is_quantizable": false,
+				"is_updateable": false
+			},
+			"lr": {
+				"id": 6,
+				"type": 0,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "ANY",
+				"src_axis_format": "ANY",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					1
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"matmul": {
+				"id": 12,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"matmul_1": {
+				"id": 15,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					12
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"matmul_2": {
+				"id": 19,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"matmul_3": {
+				"id": 22,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					512
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"matmul_5": {
+				"id": 30,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NONTRIVIAL",
+				"src_axis_format": "NONTRIVIAL",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					512
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"matmul_6": {
+				"id": 31,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					512
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"matmul_7": {
+				"id": 37,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NONTRIVIAL",
+				"src_axis_format": "NONTRIVIAL",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					512,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"matmul_8": {
+				"id": 38,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NONTRIVIAL",
+				"src_axis_format": "NONTRIVIAL",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"mul": {
+				"id": 39,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"mul_1": {
+				"id": 41,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					512,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"mul_2": {
+				"id": 43,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					512
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"new_w_ffn1": {
+				"id": 42,
+				"type": 1,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					512,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"new_w_ffn2": {
+				"id": 44,
+				"type": 1,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					512
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"new_w_qkv": {
+				"id": 40,
+				"type": 1,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"prediction": {
+				"id": 26,
+				"type": 1,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"relu": {
+				"id": 23,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					512
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"scalar_tensor_default": {
+				"id": 32,
+				"type": 4,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "ANY",
+				"src_axis_format": "ANY",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					1
+				],
+				"is_quantizable": true,
+				"is_updateable": false,
+				"params_count": "1 (33.3%)"
+			},
+			"sign": {
+				"id": 7,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"sign_1": {
+				"id": 8,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					512,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"sign_2": {
+				"id": 9,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					512
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"softmax": {
+				"id": 18,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					12
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"src": {
+				"id": 1,
+				"type": 0,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"sub": {
+				"id": 27,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"t": {
+				"id": 11,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NONTRIVIAL",
+				"src_axis_format": "NONTRIVIAL",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"t_1": {
+				"id": 14,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NONTRIVIAL",
+				"src_axis_format": "NONTRIVIAL",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					12
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"t_2": {
+				"id": 21,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NONTRIVIAL",
+				"src_axis_format": "NONTRIVIAL",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					512
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"t_3": {
+				"id": 25,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NONTRIVIAL",
+				"src_axis_format": "NONTRIVIAL",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					512,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"t_4": {
+				"id": 29,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NONTRIVIAL",
+				"src_axis_format": "NONTRIVIAL",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					12
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"t_6": {
+				"id": 36,
+				"type": 3,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NONTRIVIAL",
+				"src_axis_format": "NONTRIVIAL",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					512,
+					12
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"tgt": {
+				"id": 2,
+				"type": 0,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					12,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"val_0": {
+				"id": 16,
+				"type": 4,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "ANY",
+				"src_axis_format": "ANY",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					1
+				],
+				"is_quantizable": true,
+				"is_updateable": false,
+				"params_count": "1 (33.3%)"
+			},
+			"w_ffn1": {
+				"id": 4,
+				"type": 0,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					512,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"w_ffn2": {
+				"id": 5,
+				"type": 0,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					512
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			},
+			"w_qkv": {
+				"id": 3,
+				"type": 0,
+				"dataFormat": 0,
+				"data_type": 562,
+				"unquantized_data_type": 562,
+				"axis_format": "NF",
+				"src_axis_format": "NF",
+				"quant_params": {
+					"definition": 2147483647,
+					"encoding": 2147483647,
+					"is_overridden": false,
+					"scale_offset": {
+						"bitwidth": 0,
+						"minimum": 0.0,
+						"maximum": 0.0,
+						"scale": 0.0,
+						"offset": 0,
+						"is_symmetric": false,
+						"is_fixed_point": true
+					}
+				},
+				"dims": [
+					128,
+					128
+				],
+				"is_quantizable": true,
+				"is_updateable": false
+			}
+		},
+		"nodes": {
+			"node_sign": {
+				"package": "qti.aisw",
+				"type": "Eltwise_Unary",
+				"tensor_params": {},
+				"scalar_params": {
+					"operation": {
+						"306": 13
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"operation": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"w_qkv"
+				],
+				"output_names": [
+					"sign"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_sign_1": {
+				"package": "qti.aisw",
+				"type": "Eltwise_Unary",
+				"tensor_params": {},
+				"scalar_params": {
+					"operation": {
+						"306": 13
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"operation": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"w_ffn1"
+				],
+				"output_names": [
+					"sign_1"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_sign_2": {
+				"package": "qti.aisw",
+				"type": "Eltwise_Unary",
+				"tensor_params": {},
+				"scalar_params": {
+					"operation": {
+						"306": 13
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"operation": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"w_ffn2"
+				],
+				"output_names": [
+					"sign_2"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_t": {
+				"package": "qti.aisw",
+				"type": "Transpose",
+				"tensor_params": {
+					"perm": {
+						"node_t_perm": {
+							"id": 10,
+							"type": 4,
+							"dataFormat": 0,
+							"data_type": 306,
+							"unquantized_data_type": 306,
+							"axis_format": "ANY",
+							"src_axis_format": "NOT_YET_DEFINED",
+							"quant_params": {
+								"definition": 2147483647,
+								"encoding": 2147483647,
+								"is_overridden": false,
+								"scale_offset": {
+									"bitwidth": 0,
+									"minimum": 0.0,
+									"maximum": 0.0,
+									"scale": 0.0,
+									"offset": 0,
+									"is_symmetric": false,
+									"is_fixed_point": true
+								}
+							},
+							"dims": [
+								2
+							],
+							"is_quantizable": false,
+							"is_updateable": false,
+							"data": [
+								1,
+								0
+							]
+						}
+					}
+				},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"perm": 1
+				},
+				"input_names": [
+					"sign"
+				],
+				"output_names": [
+					"t"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_matmul": {
+				"package": "qti.aisw",
+				"type": "MatMul",
+				"tensor_params": {},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					},
+					"transpose_in0": {
+						"1288": 0
+					},
+					"transpose_in1": {
+						"1288": 0
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"transpose_in0": 1,
+					"transpose_in1": 1
+				},
+				"input_names": [
+					"src",
+					"t"
+				],
+				"output_names": [
+					"matmul"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_t_1": {
+				"package": "qti.aisw",
+				"type": "Transpose",
+				"tensor_params": {
+					"perm": {
+						"node_t_1_perm": {
+							"id": 13,
+							"type": 4,
+							"dataFormat": 0,
+							"data_type": 306,
+							"unquantized_data_type": 306,
+							"axis_format": "ANY",
+							"src_axis_format": "NOT_YET_DEFINED",
+							"quant_params": {
+								"definition": 2147483647,
+								"encoding": 2147483647,
+								"is_overridden": false,
+								"scale_offset": {
+									"bitwidth": 0,
+									"minimum": 0.0,
+									"maximum": 0.0,
+									"scale": 0.0,
+									"offset": 0,
+									"is_symmetric": false,
+									"is_fixed_point": true
+								}
+							},
+							"dims": [
+								2
+							],
+							"is_quantizable": false,
+							"is_updateable": false,
+							"data": [
+								1,
+								0
+							]
+						}
+					}
+				},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"perm": 1
+				},
+				"input_names": [
+					"matmul"
+				],
+				"output_names": [
+					"t_1"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_matmul_1": {
+				"package": "qti.aisw",
+				"type": "MatMul",
+				"tensor_params": {},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					},
+					"transpose_in0": {
+						"1288": 0
+					},
+					"transpose_in1": {
+						"1288": 0
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"transpose_in0": 1,
+					"transpose_in1": 1
+				},
+				"input_names": [
+					"matmul",
+					"t_1"
+				],
+				"output_names": [
+					"matmul_1"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_div": {
+				"package": "qti.aisw",
+				"type": "Eltwise_Binary",
+				"tensor_params": {},
+				"scalar_params": {
+					"operation": {
+						"306": 2
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"operation": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"matmul_1",
+					"val_0"
+				],
+				"output_names": [
+					"div"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_softmax": {
+				"package": "qti.aisw",
+				"type": "Softmax",
+				"tensor_params": {},
+				"scalar_params": {
+					"axis": {
+						"306": 1
+					},
+					"beta": {
+						"562": 1.0
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"axis": 1,
+					"beta": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"div"
+				],
+				"output_names": [
+					"softmax"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_matmul_2": {
+				"package": "qti.aisw",
+				"type": "MatMul",
+				"tensor_params": {},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					},
+					"transpose_in0": {
+						"1288": 0
+					},
+					"transpose_in1": {
+						"1288": 0
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"transpose_in0": 1,
+					"transpose_in1": 1
+				},
+				"input_names": [
+					"softmax",
+					"matmul"
+				],
+				"output_names": [
+					"matmul_2"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_t_2": {
+				"package": "qti.aisw",
+				"type": "Transpose",
+				"tensor_params": {
+					"perm": {
+						"node_t_2_perm": {
+							"id": 20,
+							"type": 4,
+							"dataFormat": 0,
+							"data_type": 306,
+							"unquantized_data_type": 306,
+							"axis_format": "ANY",
+							"src_axis_format": "NOT_YET_DEFINED",
+							"quant_params": {
+								"definition": 2147483647,
+								"encoding": 2147483647,
+								"is_overridden": false,
+								"scale_offset": {
+									"bitwidth": 0,
+									"minimum": 0.0,
+									"maximum": 0.0,
+									"scale": 0.0,
+									"offset": 0,
+									"is_symmetric": false,
+									"is_fixed_point": true
+								}
+							},
+							"dims": [
+								2
+							],
+							"is_quantizable": false,
+							"is_updateable": false,
+							"data": [
+								1,
+								0
+							]
+						}
+					}
+				},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"perm": 1
+				},
+				"input_names": [
+					"sign_1"
+				],
+				"output_names": [
+					"t_2"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_matmul_3": {
+				"package": "qti.aisw",
+				"type": "MatMul",
+				"tensor_params": {},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					},
+					"transpose_in0": {
+						"1288": 0
+					},
+					"transpose_in1": {
+						"1288": 0
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"transpose_in0": 1,
+					"transpose_in1": 1
+				},
+				"input_names": [
+					"matmul_2",
+					"t_2"
+				],
+				"output_names": [
+					"matmul_3"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_relu": {
+				"package": "qti.aisw",
+				"type": "ElementWiseNeuron",
+				"tensor_params": {},
+				"scalar_params": {
+					"operation": {
+						"306": 4
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"operation": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"matmul_3"
+				],
+				"output_names": [
+					"relu"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_t_3": {
+				"package": "qti.aisw",
+				"type": "Transpose",
+				"tensor_params": {
+					"perm": {
+						"node_t_3_perm": {
+							"id": 24,
+							"type": 4,
+							"dataFormat": 0,
+							"data_type": 306,
+							"unquantized_data_type": 306,
+							"axis_format": "ANY",
+							"src_axis_format": "NOT_YET_DEFINED",
+							"quant_params": {
+								"definition": 2147483647,
+								"encoding": 2147483647,
+								"is_overridden": false,
+								"scale_offset": {
+									"bitwidth": 0,
+									"minimum": 0.0,
+									"maximum": 0.0,
+									"scale": 0.0,
+									"offset": 0,
+									"is_symmetric": false,
+									"is_fixed_point": true
+								}
+							},
+							"dims": [
+								2
+							],
+							"is_quantizable": false,
+							"is_updateable": false,
+							"data": [
+								1,
+								0
+							]
+						}
+					}
+				},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"perm": 1
+				},
+				"input_names": [
+					"sign_2"
+				],
+				"output_names": [
+					"t_3"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_matmul_4": {
+				"package": "qti.aisw",
+				"type": "MatMul",
+				"tensor_params": {},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					},
+					"transpose_in0": {
+						"1288": 0
+					},
+					"transpose_in1": {
+						"1288": 0
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"transpose_in0": 1,
+					"transpose_in1": 1
+				},
+				"input_names": [
+					"relu",
+					"t_3"
+				],
+				"output_names": [
+					"prediction"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_sub": {
+				"package": "qti.aisw",
+				"type": "Eltwise_Binary",
+				"tensor_params": {},
+				"scalar_params": {
+					"operation": {
+						"306": 18
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"operation": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"prediction",
+					"tgt"
+				],
+				"output_names": [
+					"sub"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_t_4": {
+				"package": "qti.aisw",
+				"type": "Transpose",
+				"tensor_params": {
+					"perm": {
+						"node_t_4_perm": {
+							"id": 28,
+							"type": 4,
+							"dataFormat": 0,
+							"data_type": 306,
+							"unquantized_data_type": 306,
+							"axis_format": "ANY",
+							"src_axis_format": "NOT_YET_DEFINED",
+							"quant_params": {
+								"definition": 2147483647,
+								"encoding": 2147483647,
+								"is_overridden": false,
+								"scale_offset": {
+									"bitwidth": 0,
+									"minimum": 0.0,
+									"maximum": 0.0,
+									"scale": 0.0,
+									"offset": 0,
+									"is_symmetric": false,
+									"is_fixed_point": true
+								}
+							},
+							"dims": [
+								2
+							],
+							"is_quantizable": false,
+							"is_updateable": false,
+							"data": [
+								1,
+								0
+							]
+						}
+					}
+				},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"perm": 1
+				},
+				"input_names": [
+					"sub"
+				],
+				"output_names": [
+					"t_4"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_matmul_5": {
+				"package": "qti.aisw",
+				"type": "MatMul",
+				"tensor_params": {},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					},
+					"transpose_in0": {
+						"1288": 0
+					},
+					"transpose_in1": {
+						"1288": 0
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"transpose_in0": 1,
+					"transpose_in1": 1
+				},
+				"input_names": [
+					"t_4",
+					"relu"
+				],
+				"output_names": [
+					"matmul_5"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_matmul_6": {
+				"package": "qti.aisw",
+				"type": "MatMul",
+				"tensor_params": {},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					},
+					"transpose_in0": {
+						"1288": 0
+					},
+					"transpose_in1": {
+						"1288": 0
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"transpose_in0": 1,
+					"transpose_in1": 1
+				},
+				"input_names": [
+					"sub",
+					"sign_2"
+				],
+				"output_names": [
+					"matmul_6"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_le": {
+				"package": "qti.aisw",
+				"type": "Eltwise_Binary",
+				"tensor_params": {},
+				"scalar_params": {
+					"operation": {
+						"306": 9
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"operation": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"relu",
+					"scalar_tensor_default"
+				],
+				"output_names": [
+					"le"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_index_put": {
+				"package": "qti.aisw",
+				"type": "Eltwise_Ternary",
+				"tensor_params": {},
+				"scalar_params": {
+					"eltwise_type": {
+						"1544": "ElementWiseSelect"
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"eltwise_type": 2,
+					"packageName": 2
+				},
+				"input_names": [
+					"le",
+					"scalar_tensor_default",
+					"matmul_6"
+				],
+				"output_names": [
+					"index_put"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_t_6": {
+				"package": "qti.aisw",
+				"type": "Transpose",
+				"tensor_params": {
+					"perm": {
+						"node_t_6_perm": {
+							"id": 35,
+							"type": 4,
+							"dataFormat": 0,
+							"data_type": 306,
+							"unquantized_data_type": 306,
+							"axis_format": "ANY",
+							"src_axis_format": "NOT_YET_DEFINED",
+							"quant_params": {
+								"definition": 2147483647,
+								"encoding": 2147483647,
+								"is_overridden": false,
+								"scale_offset": {
+									"bitwidth": 0,
+									"minimum": 0.0,
+									"maximum": 0.0,
+									"scale": 0.0,
+									"offset": 0,
+									"is_symmetric": false,
+									"is_fixed_point": true
+								}
+							},
+							"dims": [
+								2
+							],
+							"is_quantizable": false,
+							"is_updateable": false,
+							"data": [
+								1,
+								0
+							]
+						}
+					}
+				},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"perm": 1
+				},
+				"input_names": [
+					"index_put"
+				],
+				"output_names": [
+					"t_6"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_matmul_7": {
+				"package": "qti.aisw",
+				"type": "MatMul",
+				"tensor_params": {},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					},
+					"transpose_in0": {
+						"1288": 0
+					},
+					"transpose_in1": {
+						"1288": 0
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"transpose_in0": 1,
+					"transpose_in1": 1
+				},
+				"input_names": [
+					"t_6",
+					"matmul_2"
+				],
+				"output_names": [
+					"matmul_7"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_matmul_8": {
+				"package": "qti.aisw",
+				"type": "MatMul",
+				"tensor_params": {},
+				"scalar_params": {
+					"packageName": {
+						"1544": "qti.aisw"
+					},
+					"transpose_in0": {
+						"1288": 0
+					},
+					"transpose_in1": {
+						"1288": 0
+					}
+				},
+				"param_map": {
+					"packageName": 2,
+					"transpose_in0": 1,
+					"transpose_in1": 1
+				},
+				"input_names": [
+					"t_4",
+					"src"
+				],
+				"output_names": [
+					"matmul_8"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_mul": {
+				"package": "qti.aisw",
+				"type": "Eltwise_Binary",
+				"tensor_params": {},
+				"scalar_params": {
+					"operation": {
+						"306": 13
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"operation": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"lr",
+					"matmul_8"
+				],
+				"output_names": [
+					"mul"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_sub_1": {
+				"package": "qti.aisw",
+				"type": "Eltwise_Binary",
+				"tensor_params": {},
+				"scalar_params": {
+					"operation": {
+						"306": 18
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"operation": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"w_qkv",
+					"mul"
+				],
+				"output_names": [
+					"new_w_qkv"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_mul_1": {
+				"package": "qti.aisw",
+				"type": "Eltwise_Binary",
+				"tensor_params": {},
+				"scalar_params": {
+					"operation": {
+						"306": 13
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"operation": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"lr",
+					"matmul_7"
+				],
+				"output_names": [
+					"mul_1"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_sub_2": {
+				"package": "qti.aisw",
+				"type": "Eltwise_Binary",
+				"tensor_params": {},
+				"scalar_params": {
+					"operation": {
+						"306": 18
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"operation": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"w_ffn1",
+					"mul_1"
+				],
+				"output_names": [
+					"new_w_ffn1"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_mul_2": {
+				"package": "qti.aisw",
+				"type": "Eltwise_Binary",
+				"tensor_params": {},
+				"scalar_params": {
+					"operation": {
+						"306": 13
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"operation": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"lr",
+					"matmul_5"
+				],
+				"output_names": [
+					"mul_2"
+				],
+				"macs_per_inference": "0"
+			},
+			"node_sub_3": {
+				"package": "qti.aisw",
+				"type": "Eltwise_Binary",
+				"tensor_params": {},
+				"scalar_params": {
+					"operation": {
+						"306": 18
+					},
+					"packageName": {
+						"1544": "qti.aisw"
+					}
+				},
+				"param_map": {
+					"operation": 1,
+					"packageName": 2
+				},
+				"input_names": [
+					"w_ffn2",
+					"mul_2"
+				],
+				"output_names": [
+					"new_w_ffn2"
+				],
+				"macs_per_inference": "0"
+			}
+		}
+	}
+}

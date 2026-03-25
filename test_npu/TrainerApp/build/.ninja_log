@@ -1,0 +1,25 @@
+# ninja log v7
+45	425	7952292335069584	src/CMakeFiles/npu-trainer.dir/PAL/src/common/GetOpt.cpp.obj	7e773f50bc6edcc0
+436	536	7952292339037225	src/CMakeFiles/npu-trainer.dir/PAL/src/common/StringOp.cpp.obj	2b04a3d7f1749892
+14	566	7952292334748939	src/CMakeFiles/npu-trainer.dir/Log/LogUtils.cpp.obj	c6515941a013233
+18	734	7952292334801227	src/CMakeFiles/npu-trainer.dir/PAL/src/windows/Common.cpp.obj	9d7b0c7ac867c6cb
+11	741	7952292334730532	src/CMakeFiles/npu-trainer.dir/Log/Logger.cpp.obj	c2447007feea5410
+26	776	7952292334878743	src/CMakeFiles/npu-trainer.dir/PAL/src/windows/DynamicLoading.cpp.obj	256d92a45ef55945
+22	790	7952292334842078	src/CMakeFiles/npu-trainer.dir/PAL/src/windows/Directory.cpp.obj	79e82faf0c7844ff
+38	831	7952292334988250	src/CMakeFiles/npu-trainer.dir/PAL/src/windows/FileOp.cpp.obj	846b8117d52a2e1c
+42	850	7952292335035996	src/CMakeFiles/npu-trainer.dir/PAL/src/windows/Path.cpp.obj	2bc9b804bb2fdd2b
+785	870	7952292342466380	src/CMakeFiles/npu-trainer.dir/WrapperUtils/QnnWrapperUtils.cpp.obj	df8d5e3527bfebd5
+574	983	7952292340472558	src/CMakeFiles/npu-trainer.dir/Utils/DynamicLoadUtil.cpp.obj	8cf75bb1bad0e27e
+8	1025	7952292334653410	src/CMakeFiles/npu-trainer.dir/main.cpp.obj	5c001a3c9945045
+538	1128	7952292340220224	src/CMakeFiles/npu-trainer.dir/Utils/DataUtil.cpp.obj	62492ff092ba0a76
+3	1165	7952292334653410	src/CMakeFiles/npu-trainer.dir/QnnSampleApp.cpp.obj	855d1bf2e069d6a3
+736	1324	7952292341967389	src/CMakeFiles/npu-trainer.dir/Utils/IOTensor.cpp.obj	d4734934d0bebae5
+742	1729	7952292342037936	src/CMakeFiles/npu-trainer.dir/Utils/QnnSampleAppUtils.cpp.obj	32f2f81a7f2563f6
+1729	1889	7952292351889178	src/npu-trainer.exe	a3296fe9a1d31ad2
+121	776	7952295911380523	src/CMakeFiles/npu-trainer.dir/QnnSampleApp.cpp.obj	855d1bf2e069d6a3
+777	954	7952295917949953	src/npu-trainer.exe	a3296fe9a1d31ad2
+31	590	7952297323057859	src/CMakeFiles/npu-trainer.dir/QnnSampleApp.cpp.obj	855d1bf2e069d6a3
+591	722	7952297328713927	src/npu-trainer.exe	a3296fe9a1d31ad2
+11	551	7952306031576775	src/CMakeFiles/npu-trainer.dir/Utils/IOTensor.cpp.obj	d4734934d0bebae5
+6	559	7952306031562394	src/CMakeFiles/npu-trainer.dir/QnnSampleApp.cpp.obj	855d1bf2e069d6a3
+559	694	7952306037095376	src/npu-trainer.exe	a3296fe9a1d31ad2

@@ -1,0 +1,45 @@
+---
+timestamp: 158968089317
+command: C:\Users\ncouf\bitnet\test_npu\qnn-net-run.exe --retrieve_context output/qnn_monster_htp.bin.bin --backend QnnHtp.dll --input_list input_list_monster.txt --output_dir check_io
+execution_mode: synchronous
+inferences_completed: 1
+graphs:
+  - graph_name: qnn_monster_model
+    input_tensors:
+    - tensor_name: src
+      id: 1
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [64,512]
+    - tensor_name: tgt
+      id: 2
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [64,512]
+    - tensor_name: w_qkv
+      id: 3
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [512,512]
+    - tensor_name: w_ffn1
+      id: 4
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [2048,512]
+    - tensor_name: w_ffn2
+      id: 5
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [512,2048]
+    output_tensors:
+    - tensor_name: prediction
+      id: 52
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [64,512]
+    - tensor_name: grad_ffn2
+      id: 58
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [512,2048]
+    - tensor_name: grad_ffn1
+      id: 61
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [2048,512]
+    - tensor_name: grad_qkv
+      id: 62
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [512,512]
